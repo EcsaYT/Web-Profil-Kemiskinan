@@ -1,0 +1,257 @@
+/* style.css */
+
+/* Gaya umum */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+}
+
+/* Jumbotron */
+.jumbotron {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #343a40;
+    background: url(../img/cover-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+    color: #fff;
+    padding: 1.4rem 7%;
+    border-radius: 15px;
+}
+
+.jumbotron::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255, 0) 50%);
+  }
+
+/*.jumbotron .mask-container {
+    position: absolute;
+    /* background: salmon; */
+   /* inset: 0;
+    -webkit-mask-image: url('../img/cover-bg.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    -webkit-mask-position: center;
+}*/
+
+/* Section Profil Kemiskinan */
+#profil-kemiskinan {
+    background-color: #fff;
+    padding: 8rem 7% 1.4rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#profil-kemiskinan h2 {
+    color: #343a40;
+    text-align: center;
+}
+
+#profil-kemiskinan h2 {
+    padding: 1.4rem 7%;
+}
+
+#profil-kemiskinan h3 {
+    padding: 1rem 0;
+}
+
+/* Grafik dan Tabel */
+#profil-kemiskinan img, #profil-kemiskinan table {
+    width: 40%;
+    margin-top: 5px;
+}
+
+/* Data dan Statistik */
+#data-statistik {
+    background-color: #fff;
+    padding: 8rem 7% 1.4rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+}
+
+#data-statistik h2 {
+    color: #343a40;
+    text-align: center;
+}
+
+#data-statistik h3 {
+    padding: 1.4rem 0;
+}
+
+#data-statistik img {
+    width: 40%;
+    margin-top: 5px;
+}
+
+
+/* Program Pemerintah */
+#program-pemerintah {
+    background-color: #f8f9fa;
+    padding: 8rem 7% 1.4rem;
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+}
+
+#program-pemerintah h2 {
+    color: #343a40;
+    text-align: center;
+}
+
+/* Gaya umum untuk infografis */
+.infographic {
+    display: inline-block;
+    margin-right: 10px; /* Jarak antara infografis */
+    text-align: center;
+}
+
+.infographic img {
+    max-width: 50%; /* Agar gambar tidak melebihi lebar parent */
+    height: auto;
+}
+
+.infographic-description {
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* Kisah Sukses */
+#kisah-sukses {
+    background-color: #f8f9fa;
+    padding: 8rem 7% 1.4rem;
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+}
+
+#kisah-sukses h2 {
+    color: #343a40;
+    text-align: center;
+}
+
+/* Kontak dan Konsultasi */
+#kontak-konsultasi {
+    background-color: #f8f9fa;
+    padding: 8rem 7% 1.4rem;
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+}
+
+#kontak-konsultasi h2 {
+    color: #343a40;
+    text-align: center;
+}
+
+#kontak-konsultasi h3 {
+    padding: 1rem 0;
+}
+
+/* Tentang Kami */
+#tentang-kami {
+    background-color: #f8f9fa;
+    padding: 8rem 7% 1.4rem;
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+}
+
+#tentang-kami h2 {
+    color: #343a40;
+    text-align: center;
+}
+
+#tentang-kami h3 {
+    padding: 1rem 0;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Gaya untuk Formulir Login */
+#login {
+    padding: 120px 0;
+}
+
+
+#loginForm {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#loginForm button {
+    width: 100%;
+}
+
+/* credit */
+.credit a {
+    color: #ffffff;
+}
+.credit a:hover {
+    text-decoration: underline;
+}

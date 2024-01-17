@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Profil kemiskinan Indonesia</title>
+    <link 
+     href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+     rel="stylesheet" 
+     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+     crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+   <!-- Formulir Login Section -->
+   <section id="login" class="bg-light text-dark">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="text-center mb-4">Login</h2>
+                <form id="loginForm">
+                  <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                  </div>
+                  <button type="button" class="btn btn-primary" onclick="login()">Login</button>
+                  <p class="mt-3"> <a href="#" onclick="showSignUpForm()">Buat Akun</a></p> 
+                  <p class="mt-3"> <a href="#" onclick="showResetPasswordForm()">Lupa password?</a></p>
+                </form>
+            </div>
+        </div>
+      </div>
+    </section>
+  
+  <!-- Formulir Pendaftaran Akun -->
+  <section id="signup" class="bg-light text-dark">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center mb-4">Buat Akun Baru</h2>
+            <form id="signupForm">
+              <div class="mb-3">
+                <label for="newUsername" class="form-label">Username</label>
+                <input type="text" class="form-control" id="newUsername" name="newUsername" required>
+              </div>
+              <div class="mb-3">
+                <label for="newPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="newPassword" name="newPassword" required>
+              </div>
+              <button type="button" class="btn btn-success" onclick="createAccount()">Buat Akun</button>
+              <p class="mt-3">Sudah punya akun? <a href="#" onclick="showLoginForm()">Login</a></p>
+            </form>
+            <button type="button" class="btn btn-link" onclick="showLogin()">Sudah punya akun? Login disini</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Script untuk menampilkan formulir login saat tombol "Sudah punya akun?" diklik -->
+   <script>
+    function showLogin() {
+      // Ganti lokasi formulir login dengan lokasi formulir register
+      $('#register').appendTo('#login .container');
+      // Hapus tombol "Sudah punya akun?"
+      $('#register .btn-link').remove();
+      }
+    </script>
+
+    <!-- Formulir Reset Password -->
+    <section id="resetPassword" class="bg-light text-dark">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <h2 class="text-center mb-4">Reset Password</h2>
+            <form id="resetPasswordForm">
+              <div class="mb-3">
+                <label for="resetUsername" class="form-label">Username</label>
+                <input type="text" class="form-control" id="resetUsername" name="resetUsername" required>
+              </div>
+              <div class="mb-3">
+                <label for="newPassword" class="form-label">New Password</label>
+                <input type="password" class="form-control" id="resetNewPassword" name="resetNewPassword" required>
+              </div>
+              <button type="button" class="btn btn-warning" onclick="resetPassword()">Reset Password</button>
+              <p class="mt-3">Ingat password? <a href="#" onclick="showLoginForm()">Login</a></p>
+            </form>
+            <button type="button" class="btn btn-link" onclick="showLogin()">Ingat kembali password? Login disini</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- Script untuk Animasi Scroll dan Login -->
+   <script>
+    // Fungsi untuk menangani login
+    function login() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        // Lakukan validasi dan otentikasi di sini (contoh sederhana)
+        if (validateInput(username, password)) {
+            alert("Login berhasil!");
+            window.location.href = "index2.html"; // halaman yang sesuai
+        } else {
+            alert("Login gagal. Periksa kembali username dan password Anda.");
+        }
+    }
+
+    // Fungsi untuk validasi input
+    function validateInput(username, password) {
+        // Validasi sederhana (gantilah dengan metode validasi yang lebih kuat)
+        if (username === "" || password === "") {
+            return false;
+        }
+        return true;
+    }
+   </script>
+
+    <!-- Feather Icons -->
+    <script>
+        feather.replace()
+    </script>
+ 
+    <!-- My Javascript -->
+    <script src="js/script.js"></script>
+ 
+ 
+    <!-- Script untuk Bootstrap Bundle v5.0 -->
+    <script 
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous">
+    </script>  
+</body>
+</html>   
